@@ -9,8 +9,8 @@
 <body>
 
   <div class="container">
-    <nav class="navbar navbar-light bg-faded">
-      <ul class="nav navbar-nav">
+    <nav class="navbar">
+      <ul class="nav nav-pills nav-justified">
         <li class="nav-item active">
           <a class="nav-link" href="<%= posts_path %>">Статьи</a>
         </li>
@@ -34,10 +34,10 @@
     </div>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9">
         <%= yield %>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
           <%= link_to tag.name, tag_path(tag.name), class: css_class %>
         <% end %>
