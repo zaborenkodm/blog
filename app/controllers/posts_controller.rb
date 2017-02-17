@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # action выводит все посты на страницу
   def index
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], per_page: 5)
   end
 
   # выводим пост с его содержимым
