@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # указываем корневой маршрут по-умолчанию
   root 'posts#index'
   # и ресурс posts
