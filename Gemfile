@@ -71,6 +71,3 @@ group :development do
   gem "letter_opener"
 end
 
-group :production do
-  gem 'pg'
-end
